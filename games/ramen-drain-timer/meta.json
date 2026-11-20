@@ -1,0 +1,9 @@
+{
+  "slug": "ramen-drain-timer",
+  "title": "ラーメン湯切りパニック",
+  "tagline": "湯切りタイマーが 6 秒でストップ！0.1 秒でもズレると店が爆発！",
+  "controls": "Space キー / クリック / タップ",
+  "tags": ["canvas", "action", "timer"],
+  "author": "Hermes Factory",
+  "createdAt": "2026-11-20"
+}
