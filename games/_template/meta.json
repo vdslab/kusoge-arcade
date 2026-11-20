@@ -1,0 +1,9 @@
+{
+  "slug": "template-game",
+  "title": "テンプレートゲーム",
+  "tagline": "新規クソゲー作成用の最小テンプレート",
+  "controls": "クリック / タップ / Space",
+  "tags": ["canvas", "template"],
+  "author": "Hermes Factory",
+  "createdAt": "2026-11-20"
+}

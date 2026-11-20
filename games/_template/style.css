@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #12151f;
+  color: #f4f6fc;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+.back-link { color: #ff8fb1; text-decoration: none; }
+.stage {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem 2rem;
+  text-align: center;
+}
+canvas {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin: 0.75rem auto;
+  border-radius: 10px;
+  border: 1px solid #303952;
+  background: #1d2233;
+  touch-action: manipulation;
+}
+button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #485478;
+  background: #27304a;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}

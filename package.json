@@ -1,0 +1,17 @@
+{
+  "name": "kusoge-arcade",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "manifest": "node scripts/build-manifest.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "verify": "npm run manifest && npm run test:unit && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "vitest": "5.1.1"
+  }
+}

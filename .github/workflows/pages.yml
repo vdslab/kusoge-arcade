@@ -1,0 +1,55 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run manifest
+      - name: Stage static site
+        run: |
+          rm -rf _site
+          mkdir -p _site/games
+          cp index.html games-manifest.json _site/
+          cp -r hub _site/hub
+          for dir in games/*/; do
+            slug="$(basename "$dir")"
+            case "$slug" in
+              _*|.*) continue ;;
+            esac
+            mkdir -p "_site/games/$slug"
+            cp -r "$dir"* "_site/games/$slug/"
+            rm -f "_site/games/$slug/"*.test.* "_site/games/$slug/"*.spec.*
+          done
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

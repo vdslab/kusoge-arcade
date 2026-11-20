@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>テンプレートゲーム | Kusoge Arcade</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="back-link" href="../../">← 格納庫へ戻る</a>
+      <button id="mute-btn" type="button" aria-pressed="false">🔊 音あり</button>
+    </header>
+    <main class="stage">
+      <h1>テンプレートゲーム</h1>
+      <p class="hud">スコア: <strong id="score">0</strong></p>
+      <canvas id="game-canvas" width="480" height="320"></canvas>
+      <div class="actions">
+        <button id="start-btn" type="button">スタート</button>
+        <button id="retry-btn" type="button" hidden>もう一回</button>
+      </div>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

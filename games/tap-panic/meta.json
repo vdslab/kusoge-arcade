@@ -1,0 +1,9 @@
+{
+  "slug": "tap-panic",
+  "title": "10秒連打パニック",
+  "tagline": "逃げる赤いボタンを10秒間ひたすら叩き続けるだけの極小クソゲー",
+  "controls": "クリック / タップ / Space",
+  "tags": ["canvas", "clicker", "sample"],
+  "author": "Hermes Factory",
+  "createdAt": "2026-11-20"
+}
